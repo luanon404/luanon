@@ -8,10 +8,6 @@ module.paths.push(
 
 const vm = require("vm");
 
-global_error = "";
-const context = {};
-vm.createContext(context);
-
 console = ((dict = {}) => new Proxy(console, {
     get(console, key) {
         if (typeof console[key] === "function") {
@@ -23,6 +19,12 @@ console = ((dict = {}) => new Proxy(console, {
         return console[key]
     }
 }))()
+
+global_error = "";
+const context = {
+    console
+};
+vm.createContext(context);
 
 process.stdin.on("data", (input) => {
     let result;

@@ -14,13 +14,7 @@ import threading
 import traceback
 import subprocess
 
-
-class PyError(Exception):
-    pass
-
-
-class NodeError(Exception):
-    pass
+from exception import PyError, NodeJsError
 
 
 class JSRuntime:
@@ -39,6 +33,12 @@ class JSRuntime:
         self._lock_event = threading.Lock()
         self._stop_event = threading.Event()
         self._queue = queue.Queue()
+
+    def __enter__(self) -> "JSRuntime":
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
+        self.close()
 
     def close(self) -> None:
         if self._node and self._node.poll() is None:
@@ -129,7 +129,7 @@ class JSRuntime:
                 if "PyError" in error:
                     raise PyError(error.split(":", 1)[-1].strip())
                 if "NodeError" in error:
-                    raise NodeError(error.split(":", 1)[-1].strip())
+                    raise NodeJsError(error.split(":", 1)[-1].strip())
             # Cái dòng chết tiệt này tốn 3 ngày để fix
             # Vì lý do chết tiệt gì đó mà hàm set() lại không hoạt động
             self._stop_event.clear()

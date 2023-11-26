@@ -131,9 +131,9 @@ class CfChallenge:
         }
 
         luanon_challenge = self.session.post(server_post_url, data=luanon_body, headers=luanon_headers)
-        print(luanon_challenge.text)
+        print(len(luanon_challenge.text), luanon_challenge.text)
         luanon_challenge_body = cf_response_body.decode(luanon_challenge.text)
-        print(22222222, luanon_challenge_body)
+        print(len(luanon_challenge_body), luanon_challenge_body)
 
         match _cf_chl_opt["cType"]:
             case "managed":

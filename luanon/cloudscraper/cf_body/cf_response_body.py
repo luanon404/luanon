@@ -14,6 +14,7 @@ from .cf_base_body import CfBaseBody
 
 @dataclass
 class CfResponseBody(CfBaseBody):
+    __slots__ = ["c_ray"]
     c_ray: str
 
     @override

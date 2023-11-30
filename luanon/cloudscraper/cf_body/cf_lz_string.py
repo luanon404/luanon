@@ -12,6 +12,7 @@ from dataclasses import dataclass
 
 @dataclass
 class DataObject:
+    __slots__ = ["val", "position", "index"]
     val: int
     position: int
     index: int

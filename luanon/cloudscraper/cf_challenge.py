@@ -18,6 +18,7 @@ from .jsdom_runtime import JSDomRuntime
 
 @dataclass
 class CfChallenge:
+    __slots__ = ["cloudflare_scraper", "session", "response"]
     cloudflare_scraper: "CloudflareScraper"
     session: requests.Session
     response: requests.Response | None

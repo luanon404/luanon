@@ -15,6 +15,7 @@ from .cf_lz_string import CfLzString
 
 @dataclass
 class CfRequestBody(CfBaseBody):
+    __slots__ = ["secret_key"]
     secret_key: str
 
     @override

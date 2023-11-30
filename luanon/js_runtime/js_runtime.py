@@ -14,7 +14,7 @@ import threading
 import traceback
 import subprocess
 
-from exception import PyError, NodeJsError
+from .exception import PyError, NodeJsError
 
 
 class JSRuntime:

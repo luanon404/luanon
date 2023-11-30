@@ -20,4 +20,3 @@ packages = {
 
 Install = lambda: base_install(packages)
 Uninstall = lambda: base_uninstall(packages)
-Install()

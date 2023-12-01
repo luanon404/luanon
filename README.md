@@ -31,7 +31,6 @@ $${An \space intellectual \space product \space of \space \color{lightyellow}Lua
   | [hcaptcha](#HCaptcha)         | ≥ 3.12 | TN         | Bypass hcaptcha bằng thư viện requests.            |
   | [image](#Image)               | ≥ 3.12 | TN         | Bộ xử lý hình ảnh để train AI cho hcaptcha         |
   | [js_runtime](#JS_Runtime)     | ≥ 3.12 | CO         | Chạy Javascript trong Python.                      |
-  | [webdriver](#WebDriver)       | ≥ 3.12 | TN         | Trình điều khiển browser cho Android               |
 
 ## CloudScraper
 
@@ -104,10 +103,6 @@ $${An \space intellectual \space product \space of \space \color{lightyellow}Lua
   except Exception as ex:
       print(f"Lỗi: {repr(ex)}")
   ```
-
-## WebDriver
-
-- Chả biết ghi gì nữa.
 
 ---
 

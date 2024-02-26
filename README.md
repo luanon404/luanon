@@ -13,7 +13,7 @@ $${An \space intellectual \space product \space of \space \color{lightyellow}Lua
 ## Ghi chú
 
 - Nhóm hỗ trợ Telegram: [LuaNonCommunity](https://t.me/LuaNonCommunity)
-- Phiên bản hiện tại: 1.0.0-dev (là chưa có gì hết😁)
+- Phiên bản hiện tại: 1.0.1-dev (là chưa có gì hết😁)
 
   | Mã | Giải thích                                  |
   |----|---------------------------------------------|

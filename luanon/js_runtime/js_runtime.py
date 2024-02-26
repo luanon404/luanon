@@ -21,7 +21,7 @@ class JSRuntime:
 
     def __init__(self, filename: str = "") -> None:
         # Replace để đảm bảo cái này không bị lỗi prefix \ và /
-        filename = os.path.abspath(filename or __file__.replace("js_runtime.py", "js_runtime.js"))
+        filename = filename or os.path.abspath(__file__.replace("js_runtime.py", "js_runtime.js"))
         self._node = subprocess.Popen(
             ["node", filename],
             stdin=subprocess.PIPE,

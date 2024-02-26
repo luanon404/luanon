@@ -22,7 +22,8 @@ console = ((dict = {}) => new Proxy(console, {
 
 global_error = "";
 const context = {
-    console
+    console,
+    require,
 };
 vm.createContext(context);
 
